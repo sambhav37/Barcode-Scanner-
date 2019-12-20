@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Barcode Reader </title>
+<head>
+  <link href="../static/main.css" rel="stylesheet">
+</head>
+  <body>
+    <div class="container">
+      <h1>Barcode Scanner</h1>
+      <h3>Press start for Webcam.</h3>
+        <form action="{{url_for('video_stream')}}" method="POST" enctype="multipart/form-data">
+          <button type="submit"> START </button>
+        </form>
+      <div class="output">
+        {{text|safe}}
+        {% include btn ignore missing %}
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container">
+      <footer>
+        <p>Posted by: Kumar Sambhav</p>
+        <p>NT ID: KSM2COB
+        <p>Contact information: <a href="mailto:Sambhav.Kumar@in.bosch.com">Sambhav.Kumar@in.bosch.com</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

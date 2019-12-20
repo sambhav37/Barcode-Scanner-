@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Barcode Reader </title>
+<head>
+  <link href="../static/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+  <body>
+    <div class="container">
+      <h1>Barcode Scanner</h1>
+      <h3>Press stop to Quit.</h3>
+        <img src="{{ url_for('video_feed') }}">
+        <form action="{{url_for('video_stream_stop')}}" method="POST" enctype="multipart/form-data">
+          <button class="btn btn-xs" type="submit"> STOP </button>
+        </form><br/><br/>
+      <div class="output">
+        {{text|safe}}
+        {% include btn ignore missing %}
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Posted by: Kumar Sambhav</p>
+        <p>NT ID: KSM2COB
+        <p>Contact information: <a href="mailto:Sambhav.Kumar@in.bosch.com">Sambhav.Kumar@in.bosch.com</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Barcode Reader </title>
+<head>
+  <link href="../static/main.css" rel="stylesheet">
+</head>
+  <body>
+    <div class="container">
+      <h1>Barcode Scanner</h1>
+      <h3>What do you have with you ?</h3>
+        <form action="{{url_for('success_table')}}" method="GET" enctype="multipart/form-data">
+          <button type="submit"> Image </button>
+        </form>
+        <form action="{{url_for('video_table')}}" method="GET" enctype="multipart/form-data">
+          <button type="submit"> Video </button>
+        </form>
+        <form action="{{url_for('video_stream')}}" method="GET" enctype="multipart/form-data">
+          <button type="submit"> Camera </button>
+        </form>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Posted by: Kumar Sambhav</p>
+        <p>NT ID: KSM2COB
+        <p>Contact information: <a href="mailto:Sambhav.Kumar@in.bosch.com">Sambhav.Kumar@in.bosch.com</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
